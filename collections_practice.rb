@@ -48,7 +48,10 @@ end
 
 def find_cool(array)
   array.each do |element|
-    
-end  
+    if element[:temperature] == "cool"
+      return element
+    end
+  end
+end 
   
   
