@@ -46,10 +46,10 @@ def merge_data(keys, data)
           end
         end
       end
-    elsif element.has_key?("ashley")
+     binding.pry
+   elsif element.has_key?("ashley")
       element.each do |name, data|
         temp_array.each do |ele|
-    binding.pry
          if ele.has_value?("ashley")
             answer_array << ele.merge(data)
           end
