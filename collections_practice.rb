@@ -37,7 +37,6 @@ def merge_data(keys, data)
   keys.each do |element|    #iterate into keys array
     temp_array << element    #create new hashes in new_array with first name k,v pairs
   end
-  binding.pry
   data.each do |element|                #iterate into data array
     if element.has_key?("blake")        #check 
       element.each do |name, data|
