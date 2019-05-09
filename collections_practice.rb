@@ -38,10 +38,10 @@ def merge_data(keys, data)
     temp_array << element    #create new hashes in new_array with first name k,v pairs
   end
   data.each do |element|                #iterate into data array
-  binding.pry
     if element.has_key?("blake")        #check 
       element.each do |name, data|
-        temp_array.each do |ele|
+   binding.pry
+       temp_array.each do |ele|
           if ele.has_value?("blake")
             answer_array << ele.merge(data)
           end
