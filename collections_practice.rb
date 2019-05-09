@@ -43,7 +43,6 @@ def merge_data(keys, data)
        temp_array.each do |ele|
           if ele.has_value?("blake")
             answer_array << ele.merge(data)
-   binding.pry
           end
         end
       end
@@ -52,6 +51,7 @@ def merge_data(keys, data)
         temp_array.each do |ele|
           if ele.has_value?("ashley")
             answer_array << ele.merge(data)
+   binding.pry
           end
         end
       end
