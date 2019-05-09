@@ -40,8 +40,8 @@ def merge_data(keys, data)
   data.each do |element|                #iterate into data array
     if element.has_key?("blake")        #check 
       element.each do |name, data|
-   binding.pry
        temp_array.each do |ele|
+   binding.pry
           if ele.has_value?("blake")
             answer_array << ele.merge(data)
           end
