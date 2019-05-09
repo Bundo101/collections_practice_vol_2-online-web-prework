@@ -32,30 +32,16 @@ def count_elements(array)
 end
 
 def merge_data(keys, data)
-  temp_array = []
-  answer_array = []            
-  keys.each do |element|    #iterate into keys array
-    temp_array << element    #create new hashes in new_array with first name k,v pairs
-  end
-  data.each do |element|                #iterate into data array
-    if element.has_key?("blake")        #check 
-      element.each do |name, data|
-       temp_array.each do |ele|
-          if ele.has_value?("blake")
-            answer_array << ele.merge(data)
-          end
-        end
-      end
-     binding.pry
-   elsif element.has_key?("ashley")
-      element.each do |name, data|
-        temp_array.each do |ele|
-         if ele.has_value?("ashley")
-            answer_array << ele.merge(data)
-          end
-        end
+  new_array = []
+  keys.each do |names|
+    name = names[:first_name]
+    data.each do |data_element|
+      if data_element.has_key?(name) 
+        personal_data = data_element[name]
+        personal_data[:first_name] = name
+        new_array << personal_data
       end
     end
   end
-  answer_array
+  new_array
 end
